@@ -1,0 +1,267 @@
+.button {
+    background-color: #0074D9;
+    border: none;
+    color: white;
+    padding: 5px 16px 5px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 1px;
+    cursor: pointer;
+    border-radius: 7px;
+}
+
+.arrow-left {
+    padding: 7px 16px 7px 41px; /* added padding to make room for the image */
+    background-image: url('../img/arrows/arrow_left.png');
+    background-size: 25px; /* fit the image inside the button */
+    background-repeat: no-repeat;
+    background-position: 8px center; /* adjust the position of the image */
+}
+
+.arrow-right {
+    padding: 7px 41px 7px 16px; /* added padding to make room for the image */
+    background-image: url('../img/arrows/arrow_right.png');
+    background-size: 25px; /* fit the image inside the button */
+    background-repeat: no-repeat;
+    background-position: right 8px center; /* adjust the position of the image */
+}
+
+
+.bottom-left {
+    position: fixed;
+    bottom: 16px;
+    left: 16px;
+}
+
+.bottom-right {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+}
+
+.titre{
+   
+    position: fixed;
+    top: 3%;
+    text-align: center;
+    
+}
+
+.titreprec{
+   
+    position: fixed;
+    top: 3%;
+    left:17%;
+    text-align: center;
+    
+}
+
+.titresuiv{
+   
+    position: fixed;
+    top: 3%;
+    left:10%;
+    text-align: center;
+    
+}
+
+.imgpr{
+
+    position: absolute;
+    top: 27%;
+    left: 20%;
+    height: 220px;
+    width: 230px;
+}
+
+#chrono{
+    position: fixed;
+    top: 62%;
+    left:38%;
+   font-size: "20px";
+
+
+}
+
+
+.imgps{
+
+    position: absolute;
+    top: 24%;
+    left: 18%;
+    height: 200px;
+    width: 280px;
+}
+
+
+.buttonnote{
+    width: 50px; 
+    height: 50px; 
+    position: fixed;
+    bottom: 90px; /* Ajustez la valeur pour définir la distance par rapport au bas */
+    left: 50%; /* Centre le bouton horizontalement */
+    transform: translateX(-50%);
+    background-image: url('../img/anas_img/note.jpg'); 
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+
+
+
+}
+
+.buttonstrt{
+    width: 160px; 
+    height: 100px; 
+    position: fixed;
+    bottom: 150px; /* Ajustez la valeur pour définir la distance par rapport au bas */
+    left: 30%; /* Centre le bouton horizontalement */
+    transform: translateX(-50%);
+    background-image: url('../img/anas_img/start.jpg'); 
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+}
+
+.buttonstop{
+    width: 75px; 
+    height: 75px; 
+    position: fixed;
+    bottom: 157px; /* Ajustez la valeur pour définir la distance par rapport au bas */
+    left: 70%; /* Centre le bouton horizontalement */
+    transform: translateX(-50%);
+    background-image: url('../img/anas_img/stop1.png'); 
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+}
+
+
+.buttondesc{
+    position: fixed;
+    bottom:  185px;
+    left: 10%;
+    width: 60px;
+    height: 25px;
+    bottom: 100px; /* Ajustez la valeur pour définir la distance par rapport au bas */
+}
+
+
+.buttonpartage{
+    width: 30px; 
+    height: 30px; 
+    position: fixed;
+    bottom: 100px; /* Ajustez la valeur pour définir la distance par rapport au bas */
+    left: 85%; /* Centre le bouton horizontalement */
+    transform: translateX(-50%);
+    background-image: url('../img/anas_img/Partage.jpg'); 
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+
+}
+
+
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    text-align: center; /* Aligner le contenu au centre horizontalement */
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    width: 300px; /* Largeur de la fenêtre modale */
+    max-width: 80%; /* Largeur maximale (si la page est plus large que 375px) */
+    height: 400px; /* Hauteur de la fenêtre modale */
+    max-height: 80%; /* Hauteur maximale (si la page est plus haute que 667px) */
+    overflow: auto; /* Ajouter une barre de défilement si le contenu dépasse la taille de la fenêtre modale */
+}
+.modal-content1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    text-align: center; /* Aligner le contenu au centre horizontalement */
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    width: 300px; /* Largeur de la fenêtre modale */
+    max-width: 80%; /* Largeur maximale (si la page est plus large que 375px) */
+    height: 200px; /* Hauteur de la fenêtre modale */
+    max-height: 80%; /* Hauteur maximale (si la page est plus haute que 667px) */
+    overflow: auto; /* Ajouter une barre de défilement si le contenu dépasse la taille de la fenêtre modale */
+}
+
+
+#texte {
+    text-align: left; /* Aligner le texte à gauche à l'intérieur de la fenêtre modale */
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.etoiles {
+    font-size: 24px;
+}
+
+.etoile {
+    cursor: pointer;
+}
+
+#message-note {
+    display: none;
+}
+
+.etoile-jaune {
+    color: yellow;
+}
+
+.reseaux-sociaux {
+    text-align: center;
+}
+
+.reseaux-sociaux a {
+    display: inline-block;
+    margin: 10px;
+}
+
+.reseaux-sociaux img {
+    width: 50px;
+    height: 50px;
+}
+
+
+    
+
+
+
+
+
+      
+
+    
+    

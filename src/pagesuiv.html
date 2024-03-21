@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style_anas.css"> 
+    <title>Projet CAI</title>
+</head>
+<body>
+    <a href="index.html">
+      <button type="button" class="button arrow-left" >Accueil</button>
+    </a>
+
+    <a href="index_anas.html">
+        <button type="button" class="button && bottom-left arrow-left">Défi précédent</button>
+    </a>
+
+    <h1 class="titresuiv"> Gainage-planche <br> 2 min </h1>
+    <img src="../img/anas_img/gainage-planche-ventre-plat-edited.jpg" class="imgps" >  
+    <button id="button-note" type="button" class="buttonnote" ></button>
+    <div class="modal" id="modal-note">
+      <div class="modal-content1">
+          <span class="close" id="fermer-note">&times;</span>
+          <h2>Donner une note</h2>
+          <div class="etoiles">
+              <span class="etoile" data-value="1">★</span>
+              <span class="etoile" data-value="2">★</span>
+              <span class="etoile" data-value="3">★</span>
+              <span class="etoile" data-value="4">★</span>
+              <span class="etoile" data-value="5">★</span>
+          </div>
+          <div id="message-note">Merci pour la note</div>
+      </div>
+    </div>
+
+
+    <button id ="button" type="button" class="buttondesc && button">?</button>
+    <div class="modal" id="modal">
+      <div class="modal-content">
+          <span class="close" id="fermer">&times;</span>
+          <div id="texte">
+            L'exercice de gainage en planche est un exercice de renforcement de base qui sollicite les muscles abdominaux, du dos, et les muscles stabilisateurs du tronc. C'est un exercice efficace pour renforcer votre sangle abdominale, améliorer votre posture, et développer une base solide. Dans cet exercice, vous vous maintenez en position de planche pendant 2 minutes.
+           <br><br>
+           
+          <b> Description de l'Exercice :</b>  <br><br>
+                                              * Commencez par vous allonger face contre terre sur un tapis de yoga ou une surface confortable.
+                                                <br><br>
+                                              * Placez vos coudes directement sous vos épaules, de manière à former un angle de 90 degrés avec vos bras. Vos avant-bras doivent être parallèles et vos mains à plat sur le sol.
+                                                <br><br>
+                                              * Contractez les muscles abdominaux, les fessiers et les quadriceps pour maintenir une ligne droite de la tête aux talons. Veillez à ne pas creuser le bas du dos ni à surélever les fesses.
+                                                <br><br>
+                                              * Fixez votre regard vers le sol, en gardant la tête alignée avec la colonne vertébrale.
+                                                <br><br>
+                                              * Respirez régulièrement en maintenant la position. Évitez de retenir votre souffle.
+                                                <br><br>
+                                              * Tenez la position de la planche pendant 2 minutes complètes. Vous pouvez utiliser un minuteur ou une application de chronométrage pour suivre le temps.
+
+                                              
+                                              <br><br>
+          </div>
+      </div>
+    </div>
+
+    <button id="button-partager" type="button" class="buttonpartage"></button>
+    <div class="modal" id="modal-partager">
+      <div class="modal-content1">
+          <span class="close" id="fermer-partager">&times;</span>
+          <h2>Partager sur les Réseaux Sociaux</h2>
+          <div class="reseaux-sociaux">
+              <a href="https://www.facebook.com"><img src="../img/anas_img/face.jpg" alt="Facebook"></a>
+              <a href="https://www.instagram.com"><img src="../img/anas_img/insta.jpg" alt="Instagram"></a>
+              <a href="https://twitter.com"><img src="../img/anas_img/twitter.jpg" alt="Twitter"></a>
+              <a href="https://api.whatsapp.com/send?phone=NUMERO_DE_TELEPHONE"><img src="../img/anas_img/whatsapp.jpg" alt="WhatsApp"></a>
+
+              <!-- Ajoutez d'autres icônes de réseaux sociaux au besoin -->
+          </div>
+      </div>
+    </div>
+  
+
+    <button  id="button-start"  type="button" class="buttonstrt"></button>
+    <button  id="button-stop" type="button" class="buttonstop"></button>
+   
+    
+    <div id="chrono">00:00</div>
+    
+       
+
+   
+
+
+
+<script> 
+    let intervalId;
+    let minutes = 0;
+    let seconds = 0;
+
+    const chronometre = document.getElementById('chrono');
+    const buttonStart = document.getElementById('button-start');
+    const buttonStop = document.getElementById('button-stop');
+
+    function updateChronometre() {
+        seconds++;
+        if (seconds === 60) {
+            seconds = 0;
+            minutes++;
+        }
+       
+        const formattedMinutes = minutes < 10 ? `0${minutes}` : minutes;
+        const formattedSeconds = seconds < 10 ? `0${seconds}` : seconds;
+
+        chronometre.innerText = `${formattedMinutes}:${formattedSeconds}`;
+    }
+
+    buttonStart.addEventListener('click', function() {
+        if (!intervalId) {
+            intervalId = setInterval(updateChronometre, 1000);
+           
+        } else {
+            clearInterval(intervalId);
+            intervalId = null;
+           
+        }
+    });
+
+    buttonStop.addEventListener('click', function() {
+        clearInterval(intervalId);
+        intervalId = null;
+        minutes = 0;
+        seconds = 0;
+        chronometre.innerText = '00:00';
+    });
+
+
+  
+    const bouton = document.getElementById('button');
+    const modal = document.getElementById('modal');
+    const fermer = document.getElementById('fermer');
+
+    bouton.addEventListener('click', function() {
+        modal.style.display = 'block';
+    });
+
+    fermer.addEventListener('click', function() {
+        modal.style.display = 'none';
+    });
+
+    window.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+
+
+    const boutonNote = document.getElementById('button-note');
+    const modalNote = document.getElementById('modal-note');
+    const fermerNote = document.getElementById('fermer-note');
+    const etoiles = document.querySelectorAll('.etoile');
+    const messageNote = document.getElementById('message-note');
+
+    boutonNote.addEventListener('click', function() {
+        modalNote.style.display = 'block';
+    });
+
+    fermerNote.addEventListener('click', function() {
+        modalNote.style.display = 'none';
+    });
+
+    etoiles.forEach(etoile => {
+        etoile.addEventListener('click', function() {
+            const note = this.getAttribute('data-value');
+            messageNote.style.display = 'block';
+            messageNote.innerHTML = `Merci pour la note de ${note} étoiles.`;
+            
+            // Ajoutez la classe "etoile-jaune" aux étoiles notées
+            etoiles.forEach(etoile => {
+                etoile.classList.remove('etoile-jaune'); // Supprimez la classe jaune de toutes les étoiles
+            });
+            for (let i = 0; i < note; i++) {
+                etoiles[i].classList.add('etoile-jaune'); // Ajoutez la classe jaune aux étoiles notées
+            }
+        });
+    });
+
+    window.addEventListener('click', function(event) {
+        if (event.target === modalNote) {
+            modalNote.style.display = 'none';
+        }
+    });
+
+    const boutonPartager = document.getElementById('button-partager');
+    const modalPartager = document.getElementById('modal-partager');
+    const fermerPartager = document.getElementById('fermer-partager');
+
+    boutonPartager.addEventListener('click', function() {
+        modalPartager.style.display = 'block';
+    });
+
+    fermerPartager.addEventListener('click', function() {
+        modalPartager.style.display = 'none';
+    });
+
+    window.addEventListener('click', function(event) {
+        if (event.target === modalPartager) {
+            modalPartager.style.display = 'none';
+        }
+    });
+
+
+
+
+    
+  
+
+</script>   
+   
+
+
+
+
+
+
+</body>
+
+</html>

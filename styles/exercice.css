@@ -1,0 +1,209 @@
+/* Style the button */
+.button {
+    background-color: #0074D9;
+    border: none;
+    color: white;
+    padding: 15px 32px 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 36px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+/* Hover effect */
+.button:hover {
+    /* background-color: #0063aa; */
+}
+
+.button-grayed {
+    background-color: #747474;
+}
+
+.top-left {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+}
+
+.top-right {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+}
+
+.bottom-left {
+    position: fixed;
+    bottom: 16px;
+    left: 16px;
+}
+
+.bottom-right {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+}
+
+.arrow-left {
+    padding: 15px 32px 15px 82px; /* added padding to make room for the image */
+    background-image: url('../img/arrows/arrow_left.png');
+    background-size: 50px; /* fit the image inside the button */
+    background-repeat: no-repeat;
+    background-position: 16px center; /* adjust the position of the image */
+}
+
+.arrow-right {
+    padding: 15px 82px 15px 32px; /* added padding to make room for the image */
+    background-image: url('../img/arrows/arrow_right.png');
+    background-size: 50px; /* fit the image inside the button */
+    background-repeat: no-repeat;
+    background-position: right 16px center; /* adjust the position of the image */
+}
+
+.centered-horizontal {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.centered-vertical {
+    position: fixed;
+    top: 50%;
+}
+
+.header-text {
+    text-align: center;
+    padding-top: 13px;
+    font-family: 'Arial';
+}
+
+.medium-text {
+    font-size: 36px;
+    font-family: 'Arial';
+}
+
+.big-text {
+    font-size: 58px;
+    font-family: 'Arial';
+}
+
+.exercice-img {
+    position: absolute;
+    width: 80%;
+    height: auto;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.medium-margin-horizontal {
+    margin-left: 26px;
+    margin-right: 26px;
+}
+
+.sticky-right {
+    right: 0;
+}
+
+.ra-button {
+    padding: 15px 15px 15px 80px; /* added padding to make room for the image */
+    background-image: url('../img/exercice/ar_img.png');
+    background-size: 60px; /* fit the image inside the button  */
+    background-repeat: no-repeat;
+    background-position: 16px center; /* adjust the position of the image */
+}
+
+.timer {
+    position: fixed;
+    bottom: 32%;
+    font-size: 175px;
+    font-weight: bold;
+    font-family: 'Arial';
+}
+
+.pause-button {
+    position: fixed;
+    bottom: 25%;
+    padding: 15px 20px 15px 85px; /* added padding to make room for the image */
+    background-image: url('../img/exercice/pause.png');
+    background-size: 42px; /* fit the image inside the button */
+    background-repeat: no-repeat;
+    background-position: 20px center; /* adjust the position of the image */
+}
+
+.box {
+    position: fixed;
+    width: 80%;
+    height: auto;
+    background-color: #0074d9e9;
+    border-radius: 15px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5); /* add a shadow */
+    /*animation: fadeIn 1s ease-in-out forwards; /* add the animation */
+}
+
+#infos {
+    /* opacity: 0; */
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fadeIn {
+    opacity: 1;
+}
+
+.fadeOut {
+    opacity: 0;
+}
+
+.close-button {
+    position: fixed;
+    padding: 15px 15px 15px 15px; /* added padding to make room for the image */
+    background-image: url('../img/exercice/close.png');
+    background-size: 42px; /* fit the image inside the button */
+    background-repeat: no-repeat;
+    background-position: center; /* adjust the position of the image */
+    height: 10%;
+    width: 10%;
+}
+
+.title-infos {
+    margin-left: 30px; 
+    color: white; 
+    font-family: Arial; 
+    font-size: 220%;
+}
+
+.text-infos {
+    margin-left: 30px; 
+    margin-right: 30px; 
+    font-family: Arial; 
+    font-size: 150%; 
+    color: white;
+}
+
+.full-page-div {
+    background-color: #303030; 
+    position:fixed; 
+    height: 100%; 
+    width: 100%; 
+    margin: 0; 
+    padding: 0; 
+    top: 0px; 
+    left: 0px;
+}
+
+.full-page-text {
+    position:absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: white; 
+    text-align: center;
+}
+
+.iframe-style {
+    width: 100%; 
+    height: 94%; 
+    bottom: 0px; 
+    position: absolute;
+}

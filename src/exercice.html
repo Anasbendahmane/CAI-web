@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page d'exercice</title>
+        <link rel="stylesheet" href="../styles/exercice.css">
+    </head>
+    <body>
+        <div id="div_ra" class="full-page-div" style="display: none;">
+        <button id="retour_ra" class="button top-left arrow-left">Retour</button>
+            <iframe
+                src="https://sketchfab.com/models/1643f24070c34e6ca82b59a5145b949a/embed?autostart=1&cardboard=0&internal=1&tracking=0&ui_ar=0&ui_infos=0&ui_snapshots=1&ui_stop=0&ui_theatre=1&ui_watermark=0"
+                name="targetframe" allowTransparency="true" scrolling="no" frameborder="0"
+                class="iframe-style">
+            </iframe>
+        </div>
+        <div id="main" style="display: block;">
+            <!-- header -->
+            <div class="header">
+                <h1 class="header-text medium-text centered-horizontal">Entraînement jour 5</h1>
+                <a href="programme d'entrainement jour 5.html">
+                    <button class="button top-left arrow-left">Retour</button>
+                </a>
+            </div>
+            <!-- exercice -->
+            <div>
+                <button id="infos_button" class="button medium-margin-horizontal big-text centered-vertical">&ThickSpace;&ThickSpace; ? &ThickSpace;&ThickSpace;</button>
+                <button id="vr_button" class="button ra-button medium-margin-horizontal sticky-right big-text centered-vertical button-grayed">&MediumSpace;RA&MediumSpace;</button>
+                <div class="centered-horizontal">
+                    <br>
+                    <h1 id="title_exercice" class="header-text big-text">LE CRUNCH CLASSIQUE</h1>
+                    <img id="exercice_image" src="../img/exercice/crunch-classique.jpg" alt="Crunch classique" class="exercice-img">
+                    <div id="infos" class="centered-horizontal box fadeOut">
+                        <button id="close_infos" class="button top-right close-button"></button>
+                        <h1 class="title-infos">Informations</h1>
+                        <p id="description" class="text-infos">
+                            Le crunch classique est un exercice abdominal visant principalement à renforcer les muscles de la région abdominale, en mettant particulièrement l'accent sur les muscles droits de l'abdomen.
+                            <br><br>
+                            <b>Position de départ :</b> Allongez-vous sur le dos, genoux pliés, pieds à plat. Placez vos mains derrière votre tête sans intercaler les doigts.
+                            <br><br>
+                            <b>Activation des muscles :</b> Contractez les abdominaux pour stabiliser le tronc.
+                            <br><br>
+                            <b>Mouvement :</b> Soulevez légèrement les épaules et la tête du sol en contractant les abdominaux, sans relever complètement le dos.
+                            <br><br>
+                            <b>Point culminant :</b> Atteignez le point le plus haut de la contraction, maintenez pendant une seconde.
+                            <br><br>
+                            <b>Retour à la position de départ :</b> Redescendez lentement en contrôlant le mouvement.
+                    </div>
+                </div>
+            </div>
+            <!-- timer -->
+            <div>
+                <div id="timer" class="timer centered-horizontal">00:30</div>
+                <button class="button big-text pause-button centered-horizontal">PAUSE</button>
+            </div>
+            <!-- bottom buttons -->
+            <div class="bottom-buttons">
+                <button id="previous_exercice" class="button bottom-left arrow-left button-grayed">Exercice précédent</button>
+                <button id="next_exercice" class="button bottom-right arrow-right">Exercice suivant</button>
+            </div>
+        </div>
+    </body>
+    <script src="../js/exercice.js"></script>
+</html>
